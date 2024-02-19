@@ -21,10 +21,10 @@ const Users = React.lazy(() => import("../Users"));
 
 const Negociant = React.lazy(() => import("../Negociant"));
 
-//const socket = io.connect("http://localhost:1338");
-const socket = io("https://mylogefserver.onrender.com", {
-  transports: ["websocket"],
-});
+const socket = io.connect("https://mylogefserver.onrender.com");
+//const socket = io("https://mylogefserver.onrender.com", {
+//  transports: ["websocket"],
+// });
 
 function MainPage() {
   const dispatch = useDispatch();
