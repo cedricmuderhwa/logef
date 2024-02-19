@@ -22,7 +22,7 @@ const Users = React.lazy(() => import("../Users"));
 const Negociant = React.lazy(() => import("../Negociant"));
 
 //const socket = io.connect("http://localhost:1338");
-const socket = io(process.env.REACT_APP_SERVER_URL, {
+const socket = io("https://mylogefserver.onrender.com:1338", {
   transports: ["websocket"],
 });
 
