@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: '44.226.122.3/api',
+  baseURL: 'https://mylogefserver.onrender.com/api',
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
