@@ -21,7 +21,7 @@ const Users = React.lazy(() => import("../Users"));
 
 const Negociant = React.lazy(() => import("../Negociant"));
 
-const socket = io.connect("https://mylogefserver.onrender.com");
+const socket = io.connect("44.226.122.3");
 //const socket = io("https://mylogefserver.onrender.com", {
 //  transports: ["websocket"],
 // });
