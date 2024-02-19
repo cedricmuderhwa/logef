@@ -2,7 +2,7 @@
   "name": "logef-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://logefserver.vercel.app:1338",
+  "proxy": "https://mylogefserver.onrender.com",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@hookform/resolvers": "^2.9.8",
