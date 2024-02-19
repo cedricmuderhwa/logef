@@ -1,0 +1,145 @@
+.cardSpecs {
+  width: 100%;
+  padding-block: 1px;
+  display: inline-flex;
+  justify-content: space-between;
+
+  .rightSectionSpecs {
+    padding-left: 14px;
+    margin-top: -14px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 18px;
+      padding-top: 8px;
+    }
+
+    h3 {
+      margin-top: 2px;
+      font-size: 62px;
+      font-weight: 600;
+      margin-bottom: 0px;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 8px;
+
+      p {
+        font-size: 13px;
+        padding: 0;
+        margin: 0;
+        margin-left: 8px;
+        color: rgb(55, 53, 53);
+      }
+    }
+  }
+}
+
+.topDivision {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 16px;
+  color: #808080;
+  margin-bottom: 14px;
+  margin-left: 0px;
+}
+
+.divisionCard {
+  display: inline-flex;
+  align-items: flex-end;
+  padding: 6.4px 0px;
+
+  h2 {
+    text-align: right;
+    width: 58px;
+    font-size: 22px;
+    padding-top: 4px;
+    color: grey;
+    font-weight: 400;
+  }
+
+  span {
+    margin-left: 8px;
+    width: 100%;
+    // h4 {
+    //     font-weight: 600;
+    //     font-size: 14px;
+    // }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.recharts-default-legend {
+  padding-left: 30px !important;
+}
+
+.piechart_gender {
+  position: relative;
+
+  .chart {
+    width: 280px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+  }
+
+  .center_data {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 0%;
+    width: 280px;
+    height: 100%;
+    display: grid;
+    place-content: center;
+
+    h4 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .right_data {
+    position: absolute;
+    top: 8%;
+    left: 45%;
+
+    .instruction_data {
+      margin-bottom: 7px;
+
+      span {
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        color: #808080;
+
+        b {
+          margin-left: 4px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 2px;
+        padding-left: 22px;
+        font-weight: lighter;
+      }
+    }
+  }
+}

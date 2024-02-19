@@ -1,0 +1,153 @@
+@import "../../assets/style/reset";
+
+.main-wrapper {
+  background: url("../../assets/img/coltan-rdc.jpg") center no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 8%;
+  display: grid;
+  place-content: center;
+  background-color: rgba($color: #ffffff, $alpha: 0.9);
+  border-top: 44px solid #228be6;
+  border-bottom: 44px solid #228be6;
+
+  .dt-container {
+    // width: 45%;
+    float: left;
+    padding: 0 20px;
+    margin-top: 4%;
+
+    .head-title {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      img {
+        height: 140px;
+        width: auto;
+        margin-right: 24px;
+      }
+
+      .head-title-text {
+        h1 {
+          font-size: 1.8em;
+          color: #228be6;
+          font-weight: 400;
+          line-height: 1.1em;
+        }
+
+        p {
+          font-size: 1.2em;
+          font-weight: 600;
+          padding-block: 14px;
+        }
+      }
+    }
+
+    .head-description {
+      padding-block: 28px;
+
+      p {
+        font-size: 1em;
+        color: #000000;
+      }
+    }
+
+    button {
+      margin-block: 28px;
+
+      border-right: 1px solid #1c1b1b;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: -34px;
+    color: #ffffff;
+    left: 50%;
+    translate: -50%;
+
+    p {
+      color: #ffffff !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+
+  .main-container {
+    width: 100%;
+    // height: 100vh;
+    position: relative;
+    padding: 0 8%;
+    display: grid;
+    place-content: center;
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    border-top: 44px solid #228be6;
+    border-bottom: 64px solid #228be6;
+
+    .dt-container {
+      // width: 45%;
+      float: left;
+      padding: 0 4px;
+      margin-top: 4%;
+
+      .head-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 160px;
+          width: auto;
+          margin-right: 24px;
+          margin-bottom: 24px;
+          align-self: center;
+        }
+
+        .head-title-text {
+          h1 {
+            font-size: 1.4em;
+            color: #228be6;
+            font-weight: 400;
+            line-height: 1.1em;
+          }
+
+          p {
+            font-size: 1em;
+            font-weight: 600;
+            padding-block: 14px;
+          }
+        }
+      }
+
+      .head-description {
+        padding-block: 28px;
+
+        p {
+          font-size: 0.8em;
+          line-height: 1.6em;
+          color: #000000;
+        }
+      }
+
+      button {
+        margin-block: 28px;
+        margin-bottom: 24px;
+
+        border-right: 1px solid #1c1b1b;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+}
