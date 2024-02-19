@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: 'https://logefserver.vercel.app/api',
+  baseURL: 'https://logefserver.vercel.app:1338/api',
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
