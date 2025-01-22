@@ -58,14 +58,7 @@ function FormArchive({ data, handleClose }) {
     Axios.post("https://api.cloudinary.com/v1_1/de6x6wclk/upload", formData).then(
       async (response) => {
         if (response.data) {
-            await updateNotification({
-            id: "load-data",
-            color: "green",
-            loading: true,
-            title: "Enregistrement en cours...",
-            disallowClose: true,
-            autoClose: false,
-          });
+         
           const res = await dispatch(
             updateFraud({
               _id: data?._id,
