@@ -86,7 +86,7 @@ function FormPv({ data, category, handleClose }) {
     const formData = new FormData();
 
     formData.append("file", values.file_url);
-    formData.append("upload_preset", "ml_default");
+   // formData.append("upload_preset", "ml_default");
 
     await showNotification({
       id: "load-data",
@@ -97,7 +97,7 @@ function FormPv({ data, category, handleClose }) {
       disallowClose: true,
     });
 
-    Axios.post("cloudinary://656155977323694:b5AKfjf-zPzeh-1LEsCiGm545Ks@de6x6wclk/image/upload", formData).then(
+    Axios.post("https://api.cloudinary.com/v1_1/demo/image/upload", formData).then(
       async (response) => {
         if (response.data) {
           const dataToSubmit = {
