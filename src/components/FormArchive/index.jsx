@@ -1,6 +1,6 @@
 import { Button, Divider, FileInput, Textarea, TextInput } from "@mantine/core";
 import { useForm, yupResolver } from "@mantine/form";
-import { showNotification } from "@mantine/notifications";
+import { showNotification, updateNotification  } from "@mantine/notifications";
 import Axios from "axios";
 import React, { useRef, useState } from "react";
 import { FaRegSave } from "react-icons/fa";
@@ -75,9 +75,9 @@ function FormArchive({ data, handleClose }) {
                // action: "closed",
               //  status: "closed",
                 action: "add-files",
-            field: category,
-            category: values.category,
-            file_no: values.file_no,
+         
+            observation: values.observation,
+            jugement_no: values.jugement_no,
             file_url: response.data.secure_url,
               },
             })
