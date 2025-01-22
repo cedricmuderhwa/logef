@@ -47,17 +47,38 @@ function FormArchive({ data, handleClose }) {
     formData.append("file", values.file_url);
     formData.append("upload_preset", "cedricmudex");
 
+    await showNotification({
+      id: "load-data",
+      loading: true,
+      color: "blue",
+      title: "Chargement  en cours...",
+      autoClose: false,
+      disallowClose: true,
+    });
     Axios.post("https://api.cloudinary.com/v1_1/de6x6wclk/upload", formData).then(
       async (response) => {
         if (response.data) {
+            await updateNotification({
+            id: "load-data",
+            color: "green",
+            loading: true,
+            title: "Enregistrement en cours...",
+            disallowClose: true,
+            autoClose: false,
+          });
           const res = await dispatch(
             updateFraud({
               _id: data?._id,
               dataToSubmit: {
-                ...values,
-                file_url: response.data.secure_url,
-                action: "closed",
-                status: "closed",
+               // ...values,
+               // file_url: response.data.secure_url,
+               // action: "closed",
+              //  status: "closed",
+                action: "add-files",
+            field: category,
+            category: values.category,
+            file_no: values.file_no,
+            file_url: response.data.secure_url,
               },
             })
           );
@@ -72,6 +93,7 @@ function FormArchive({ data, handleClose }) {
               title: "Réussite",
               message: "Enregistrement réussi!",
               icon: <BsCheck2 size={24} />,
+              autoClose: 3000
             });
           }
           setloading(false);
