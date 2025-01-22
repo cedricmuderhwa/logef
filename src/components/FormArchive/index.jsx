@@ -45,7 +45,7 @@ function FormArchive({ data, handleClose }) {
     const formData = new FormData();
 
     formData.append("file", values.file_url);
-    formData.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
+    formData.append("upload_preset", "cedricmudex");
 
     Axios.post("https://api.cloudinary.com/v1_1/de6x6wclk/upload", formData).then(
       async (response) => {
