@@ -70,15 +70,11 @@ function FormArchive({ data, handleClose }) {
             updateFraud({
               _id: data?._id,
               dataToSubmit: {
-               // ...values,
-               // file_url: response.data.secure_url,
-               // action: "closed",
-              //  status: "closed",
-                action: "add-files",
-         
-            observation: values.observation,
-            jugement_no: values.jugement_no,
-            file_url: response.data.secure_url,
+               ...values,
+               file_url: response.data.secure_url,
+               action: "closed",
+               status: "closed",
+            
               },
             })
           );
