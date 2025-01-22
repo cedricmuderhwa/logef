@@ -47,7 +47,7 @@ function FormArchive({ data, handleClose }) {
     formData.append("file", values.file_url);
     formData.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
 
-    Axios.post(process.env.REACT_APP_CLOUDINARY_URL, formData).then(
+    Axios.post("https://api.cloudinary.com/v1_1/de6x6wclk/upload", formData).then(
       async (response) => {
         if (response.data) {
           const res = await dispatch(
